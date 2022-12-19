@@ -6,7 +6,7 @@ type HumanProps = {
   
 class Welcome extends React.Component<HumanProps>{
     render(): React.ReactNode {
-      return <h1>Hello, {this.props.name}</h1>
+      return <h1>Welcome, {this.props.name}</h1>
     }
 }
 export default Welcome
