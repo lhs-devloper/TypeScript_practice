@@ -1,16 +1,22 @@
 import React from 'react';
 import './App.css';
-import Welcome from './components/welcome';
 import Clock from './components/clock';
-import LoginControl from './components/loginControl';
+import data from './json/1.json'
+import JsonTest from './components/jsonParser';
+import styled from 'styled-components';
 
-class App extends React.Component {
+const NexonDiv = styled.div`
+  width:100%;
+  text-align:center;
+`
+
+class App extends React.Component{
   render(): React.ReactNode {
     return (
-      <div className="App">
-        <Welcome name="MapleStory"/>
-        <LoginControl />
+      <div>
+        <JsonTest data={JSON.stringify(data)} />
         <Clock />
+        <NexonDiv>Data based on NEXON DEVELOPERS</NexonDiv>
       </div>
     );
   }
